@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link  
+    rel="stylesheet"  
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"  
+  />
+    <style type = "text/css">  
+
+    </style>
+
+</head>
+<body>
+    <!-- <div>
+        Bootstrap through create navbar
+        <nav class ="navbar navbar-extend-lg navbar-dark bg-dark fixed-top" >
+            <a href="/" class = "navbar-brand">Library Management</a>
+            <button type ="button" class ="navbar-toggler" data-toggle ="collapse" data-target = "#navbarCollapse" >
+                <span class ="navbar-toggler-icon"></span>
+            </button>
+
+            <div>
+                <div class = "navbar-nav">
+                    <a href="" class ="nav-item nav-link active">Home</a>
+                    <a herf ="" class = "nav-item nav-link">Admin</a>
+                    <a herf ="" class ="nav-item nav-link">Student</a>
+                </div>
+
+                <div class = "navbar-nav">
+                    <a href="" class ="nav-item nav-link">About us</a>
+                    <a herf ="" class ="nav-item nav-link">Contact Us</a>
+
+                </div>
+            </div>
+        </nav>
+    </div> -->
+
+
+   <div class="contener mt-5">
+        <center><h3>Signup As Student!</h3></center>
+        <form class ="col-6 mx-auto card shadow-lg p-3" method ="post" enctype ="multipart/form-data">
+
+            {% csrf_token %}
+            <center><h2 class = >Student Signup</h2></center>
+            <hr>
+            <div class="form-group">
+                <label for= "f_name" class ="form-lable">Name</label>
+                <input name ="enrolment" type="text" class ="form-control" placeholder ="">
+            </div>
+            <div class="form-group">
+                <label for ="username" class ="form-lable">Reg_Number</label>
+                <input name = "reg_number" type="text" class ="form-control" placeholder = >
+            </div>
+            <div class="form-group">
+                <label for="l_name" class ="form-lable">Year-Sem</label>
+                <input name ="year_sem" type="text" class ="form-control" placeholder ="" >
+            </div>
+            <div class="form-group">
+                <label for="l_name" class ="form-lable">Department</label>
+                <input name ="department" type="text" class ="form-control" placeholder ="" >
+            </div>
+            <div class="form-group">
+                <label for ="email" class ="form-lable">Username</label>
+                <input name = "username" type="text" class ="form-control" placeholder = >
+            </div>
+            <div class="form-group">
+                <label for ="password" class ="form-lable">password</label>
+                <input name ="password" type="text" class ="form-control" placeholder = >
+            </div>
+
+            <button type ="Submit" class ="btn btn-primary">Submit</button>
+            <center></center>
+            <div class = "text-center">Already have an account?<a href="/student_login_page/">Login here</a></div>
+            </center>
+        </form>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <div>
+        <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="/" class ="navbar-brand" >Library Management</a>
+            <button type = "button" class = "navbar-toggler" data-toggle = "collapse" data-target = "#navbarcollapse">
+                <span class ="navbar-toggler-icon"></span>
+            </button>
+
+            <div class = >
+                <div class = "navbar-nav">
+                    <a href=""class = "nav-item nav-link active">Home</a>
+                    <a href="" class = "nav-item nav-link">Admin</a>
+                    <a href="" class = "nav-item nav-link">Student</a>
+                </div>
+
+                <div class = "navbar-nav">
+                    <a href="" class = "nav-item nav-link">About Us </a>
+                    <a href="" class = "nav-item nav-link">Contact Us</a>
+                </div>
+
+            </div>
+
+        </nav>
+    </div> -->
+
+    <div class="contener mt-5">
+      <center><h3 class="">Login As Admin!</h3></center>
+      <form
+        class="col-6 mx-auto auto shadow-lg p-3"
+        mothod="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <center><h2 class=" ">Admin Login</h2></center>
+        <hr />
+
+        {% if messages %}
+        <!-- <p></p> -->
+        {{messages.tag}}
+        <div class="alert alert-primary" role="alert">
+          {% for message in messages %}
+          <!-- <p></p> -->
+          {{message}}
+          <!-- <p></p> -->
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="form-group">
+          <label for="u_name" class="form-lable">Username</label>
+          <input
+            name="username"
+            type="text"
+            class="form-control"
+            placeholder=""
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="passwoed" class="form-lable">Password</label>
+          <input
+            name="passwoed"
+            type="text"
+            class="form-control"
+            placeholder=""
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <center>
+          <p>didn't have an account?<a href="/admin_signup_page/">Signup</a></p>
+        </center>
+      </form>
+    </div>
+  </body>
+</html>

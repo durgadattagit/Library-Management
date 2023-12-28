@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form class="col-6 mx-auto">
+        <h2>Avalable Book in Library!</h2>
+      </form>
+
+      <div class="container">
+        <div class="row"><h2>Recommanded Books</h2></div>
+        <div class="row">
+          {% for book in recommended_books %}
+          <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2">
+            <a href="">
+              <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                  <img src="{{book.cover_image}}" alt="" />
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

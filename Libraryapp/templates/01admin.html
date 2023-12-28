@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a herf="/" class="navbar-brand">Library Management</a>
+        <botton
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </botton>
+        <div>
+          <div class="navbar-nav">
+            <a href="" class="nav-link nav-item activate">HOME</a>
+            <a herf="" class="nav-link nav-item">Admin</a>
+            <a herf="" class="nav-link nav-item">Student</a>
+          </div>
+          <div class="navbar-nav">
+            <a herf="" class="nav-link nav-item">About Us</a>
+            <a herf="" class="nav-link nav-item">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br /> -->
+{% extends "base.html" %}
+<!-- <p></p> -->
+{% block start %}
+<div class="content mt-5">
+  <center>
+    <h1>Hello,Admin</h1>
+    <p>Welcome to Online Library Management System</p>
+  </center>
+  <hr />
+  <!-- <center> -->
+  <form class="col-6 mx-auto card shadow-lg p-5">
+    <div>
+      <center>
+        <p>You can access various features after Login/SignUp.</p>
+
+        <a type="submit" class="btn btn-primary" herf="/admin_signup_page/"
+          >SignUp</a
+        >
+        <a type="submit" class="btn btn-primary" herf="/admin_login_page/"
+          >Login</a
+        >
+      </center>
+    </div>
+  </form>
+  <!-- </center> -->
+</div>
+
+<!-- </body>
+</html> -->
+{% endblock %}

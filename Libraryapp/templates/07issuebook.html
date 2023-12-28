@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issue Book!</title>
+  </head>
+  <body>
+    <div class="contener">
+      <form
+        class="col-6 mx-auto card shadow-lg p-3"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <div>
+          <label for="iss_date" class="form-lable">Enrolment</label>
+          <input type="text" class="form-control" name="enrolment" />
+        </div>
+        <div>
+          <label for="iss_date" class="form-lable">ISBN</label>
+          <input type="text" class="form-control" name="ISBN" />
+        </div>
+        <div>
+          <label for="iss_date" class="form-lable">Issu Date</label>
+          <input type="text" class="form-control" name="issue_date" />
+        </div>
+        <div>
+          <label for="iss_date" class="form-lable">Expary Date</label>
+          <input type="text" class="form-control" name="expary_date" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+<!-- <p></p> -->
+{% block start %}
+
+<!-- <title>hello</title> -->
+
+<div class="contener mt-5">
+  <center><h3 class="">Signup As Admin!</h3></center>
+  <form
+    class="col-6 mx-auto card shadow-lg p-3"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {% csrf_token %}
+    <center><h1>Admin Signup</h1></center>
+    <hr />
+
+    {% if messages %}
+    <!-- <p></p> -->
+    {{messages.tag}}
+    <div class="alert alert-primary" role="alert">
+      {% for message in messages %}
+      <!-- <p></p> -->
+      {{message}}
+      <!-- <p></p> -->
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div>
+      <div class="form-group">
+        <label for="fname" class="form-lable">First Name</label>
+        <input name="first_name" type="text" class="form-control" required />
+      </div>
+      <div>
+        <label for="lname" class="form-lable">Lart Name</label>
+        <input name="last_name" type="text" class="form-control" required />
+      </div>
+      <!-- <div>
+        <label for="lname" class="form-lable">Reg_Number</label>
+        <input name="reg_number" type="text" class="form-control" required />
+      </div> -->
+      <div>
+        <label for="uname" class="form-lable">Username</label>
+        <input name="username" type="text" class="form-control" required />
+      </div>
+      <div>
+        <label for="password" class="form-lable">Password</label>
+        <input name="password" type="text" class="form-control" required />
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary mx-auto">Register</button>
+      <center>
+        <p>
+          Already have an account?<a href="/admin_login_page/">Login here</a>
+        </p>
+      </center>
+    </div>
+  </form>
+</div>
+<!-- </body>
+</html> -->
+
+{% endblock %}
